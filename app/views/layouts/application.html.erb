@@ -11,6 +11,9 @@
 
   <body>
     <% if user_signed_in? %>
+    　<li>
+        <%= link_to "post_form", new_book_image_path %> 
+      </li>
       <li>
         <%= link_to "sign_out", destroy_user_session_path, method: :delete %>
       </li>
