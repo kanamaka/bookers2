@@ -12,17 +12,17 @@
   <body>
     <% if user_signed_in? %>
     　<li>
-        <%= link_to "post_form", new_book_image_path %> 
+        <a href="/book_images/new">投稿</a>
       </li>
       <li>
-        <%= link_to "sign_out", destroy_user_session_path, method: :delete %>
+        <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
       </li>
     <% else %>
       <li>
-        <%= link_to "sign_up", new_user_registration_path %>
+        <%= link_to "サインイン", new_user_registration_path %>
       </li>
       <li>
-        <%= link_to "login", new_user_session_path %>
+        <%= link_to "ログイン", new_user_session_path %>
       </li>
     <% end %>
     <%= yield %>

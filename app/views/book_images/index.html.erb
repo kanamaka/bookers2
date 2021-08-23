@@ -1,0 +1,9 @@
+<% @book_images.each do |book_image| %>
+<div>
+    <%= attachment_image_tag book_image, :image %>
+    <p>表紙:<%= imagetag('no_image.jpg') %></p>
+    <p>タイトル:<%= book_image.book_name %></p>
+    <p>あらすじ:<%= book_iamge.caption %></p>
+    <p>投稿者:<%= book_image.user.name %></p>
+</div>
+<% end %>
